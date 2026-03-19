@@ -4,7 +4,7 @@ import json
 import os
 import asyncio
 from typing import List, Dict, Tuple
-from groq import Groq
+from groq import AsyncGroq
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,21 +13,20 @@ load_dotenv()
 client = None
 
 
-def get_client() -> Groq:
-    """Get or initialize the Groq client."""
+def get_client() -> AsyncGroq:
+    """Get or initialize the AsyncGroq client."""
     global client
     if client is None:
-        api_key = os.getenv("GROQ_API_KEY")
+        api_key = os.getenv("GROQ_API_KEY", "").strip()
         if not api_key or api_key == "your_groq_api_key_here":
             raise ValueError(
-                "GROQ_API_KEY not set. Please create a .env file with your "
-                "Groq API key. Get a free key at https://console.groq.com"
+                "GROQ_API_KEY not set. Please check your environment variables."
             )
-        client = Groq(api_key=api_key)
+        client = AsyncGroq(api_key=api_key)
     return client
 
 
-def analyze_single_resume(jd_text: str, resume_text: str, candidate_name: str) -> Dict:
+async def analyze_single_resume(jd_text: str, resume_text: str, candidate_name: str) -> Dict:
     """Analyze a single resume against a job description using LLM.
     
     Returns a dict with: score, strengths, gaps, recommendation, summary
@@ -66,7 +65,7 @@ Evaluate the candidate's fit for this role. Provide your assessment in the follo
 
     try:
         groq_client = get_client()
-        response = groq_client.chat.completions.create(
+        response = await groq_client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[
                 {
@@ -131,7 +130,7 @@ Evaluate the candidate's fit for this role. Provide your assessment in the follo
         }
 
 
-def extract_jd_info(jd_text: str) -> Dict:
+async def extract_jd_info(jd_text: str) -> Dict:
     """Extract key information from the job description."""
     prompt = f"""Analyze this job description and extract key information.
 Return ONLY valid JSON:
@@ -147,7 +146,7 @@ Job Description:
 
     try:
         groq_client = get_client()
-        response = groq_client.chat.completions.create(
+        response = await groq_client.chat.completions.create(
             model="llama-3.3-70b-versatile",
             messages=[
                 {
@@ -178,7 +177,7 @@ Job Description:
         }
 
 
-def analyze_all_resumes(jd_text: str, resumes: List[Tuple[str, str]]) -> Dict:
+async def analyze_all_resumes(jd_text: str, resumes: List[Tuple[str, str]]) -> Dict:
     """Analyze all resumes against a JD and return ranked results.
     
     Args:
@@ -188,16 +187,21 @@ def analyze_all_resumes(jd_text: str, resumes: List[Tuple[str, str]]) -> Dict:
     Returns:
         Complete screening response dict
     """
-    # Extract JD information
-    jd_info = extract_jd_info(jd_text)
+    # Process JD and all resumes concurrently
+    jd_task = extract_jd_info(jd_text)
+    resume_tasks = [
+        analyze_single_resume(jd_text, resume_text, candidate_name)
+        for candidate_name, resume_text in resumes
+    ]
     
-    # Analyze each resume
-    results = []
-    for candidate_name, resume_text in resumes:
-        result = analyze_single_resume(jd_text, resume_text, candidate_name)
-        results.append(result)
+    # Wait for all tasks to complete
+    gathered_results = await asyncio.gather(jd_task, *resume_tasks)
+    
+    jd_info = gathered_results[0]
+    results = gathered_results[1:]
     
     # Sort by score (highest first)
+    results = list(results)
     results.sort(key=lambda x: x["score"], reverse=True)
     
     # Assign ranks

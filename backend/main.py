@@ -38,6 +38,23 @@ async def health_check():
     return {"status": "ok", "message": "AI Resume Screening System is running"}
 
 
+@app.get("/api/test_groq")
+async def test_groq():
+    """Test Groq connectivity."""
+    try:
+        from backend.ai_analyzer import get_client
+        client = get_client()
+        response = await client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": "Say 'hello world' and nothing else."}],
+            max_tokens=10
+        )
+        return {"status": "success", "message": response.choices[0].message.content}
+    except Exception as e:
+        import traceback
+        return {"status": "error", "message": str(e), "traceback": traceback.format_exc()}
+
+
 @app.post("/api/analyze", response_model=ScreeningResponse)
 async def analyze_resumes(
     job_description: UploadFile = File(..., description="Job Description file (PDF or TXT)"),
@@ -96,7 +113,7 @@ async def analyze_resumes(
     
     # Run AI analysis
     try:
-        results = analyze_all_resumes(jd_text, parsed_resumes)
+        results = await analyze_all_resumes(jd_text, parsed_resumes)
     except ValueError as e:
         raise HTTPException(status_code=500, detail=str(e))
     except Exception as e:
