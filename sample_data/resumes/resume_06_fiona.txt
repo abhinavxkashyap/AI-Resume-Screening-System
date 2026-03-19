@@ -1,0 +1,36 @@
+FIONA GUPTA
+Email: fiona.gupta@email.com | Phone: +91 54321 09876
+LinkedIn: linkedin.com/in/fionagupta | Location: Delhi, India
+
+SUMMARY
+Experienced Data Analyst with 2.5 years in e-commerce analytics. Skilled in SQL, Python, and Power BI with a strong focus on customer analytics and business optimization. Adept at working cross-functionally with marketing, product, and operations teams.
+
+EXPERIENCE
+
+Data Analyst | Myntra (Flipkart Group) | Aug 2021 - Present
+- Analyzed customer purchase patterns across 5M+ users using SQL and Python
+- Designed and maintained 15+ Power BI dashboards for marketing and merchandising teams
+- Conducted funnel analysis reducing checkout abandonment by 8%
+- Performed customer lifetime value (CLV) analysis driving retention strategy
+- Automated daily reporting using Python scripts and scheduled cron jobs
+- Led A/B testing for 3 homepage redesign experiments
+
+Analytics Intern | Paytm | Jan 2021 - Jul 2021
+- Assisted in building SQL queries for financial data analysis
+- Created Excel-based reports for the payments analytics team
+- Performed basic statistical analysis on transaction data
+
+SKILLS
+- SQL: Advanced (PostgreSQL, MySQL, window functions, CTEs, performance tuning)
+- Python: Intermediate (Pandas, NumPy, Matplotlib, basic Scikit-learn)
+- Visualization: Power BI (certified), Google Data Studio, Excel charts
+- Statistics: A/B testing, hypothesis testing, cohort analysis
+- Tools: Excel, Google Sheets, Git, Jupyter Notebooks
+- Domain: E-commerce analytics, customer analytics, marketing analytics
+
+EDUCATION
+B.Tech in Electronics & Communication | DTU Delhi | 2017-2021 | GPA: 8.2/10
+
+CERTIFICATIONS
+- Microsoft Power BI Data Analyst Associate
+- SQL Advanced Certificate (HackerRank)

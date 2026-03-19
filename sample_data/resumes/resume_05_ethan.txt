@@ -1,0 +1,33 @@
+ETHAN MEHTA
+Email: ethan.mehta@email.com | Phone: +91 65432 10987
+Location: Pune, India
+
+SUMMARY
+Recent graduate with a passion for data and analytics. Completed multiple online courses and personal projects in data analysis. Eager to start a career in the data analytics field.
+
+EXPERIENCE
+
+Data Analytics Intern | StartupXYZ | Jun 2023 - Aug 2023
+- Assisted in creating weekly reports using Google Sheets
+- Learned to write basic SQL queries for data extraction
+- Helped clean and organize datasets using Python scripts
+- Participated in team meetings and data review sessions
+
+Campus Projects:
+- Analyzed cricket match data using Python and Pandas (personal project)
+- Created a sales dashboard in Google Data Studio for a college fest
+- Completed IBM Data Science Professional Certificate capstone project
+
+SKILLS
+- SQL: Basic (SELECT, WHERE, GROUP BY, simple JOINs)
+- Python: Beginner-Intermediate (Pandas basics, Matplotlib)
+- Tools: Google Sheets, Google Data Studio, basic Excel
+- Visualization: Basic charts in Python and Google tools
+- Statistics: Basic understanding from coursework
+
+EDUCATION
+B.Sc in Mathematics | University of Pune | 2020-2023 | GPA: 7.2/10
+
+CERTIFICATIONS
+- IBM Data Science Professional Certificate
+- Google Data Analytics Certificate (in progress)

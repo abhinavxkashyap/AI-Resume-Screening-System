@@ -1,0 +1,37 @@
+HELEN VERMA
+Email: helen.verma@email.com | Phone: +91 32109 87654
+LinkedIn: linkedin.com/in/helenverma | Location: Bangalore, India
+
+SUMMARY
+Data Engineer with 3 years of experience building data pipelines and analytics infrastructure. Strong in SQL and Python with experience in cloud platforms. Looking to move into a more analysis-focused role.
+
+EXPERIENCE
+
+Data Engineer | Razorpay | Apr 2021 - Present
+- Built and maintained ETL pipelines processing 100M+ daily events using Airflow and Spark
+- Designed data warehouse schema on BigQuery for the analytics team
+- Wrote complex SQL queries and created dbt models for data transformation
+- Built monitoring dashboards in Grafana and Metabase
+- Collaborated with data analysts to optimize query performance
+- Managed data quality checks and automated alerts
+
+Junior Data Engineer | Freshworks | Jan 2020 - Mar 2021
+- Developed Python scripts for data ingestion from multiple sources
+- Maintained Apache Kafka streaming pipelines
+- Created documentation for data pipelines and schemas
+- Assisted in migration from on-prem databases to BigQuery
+
+SKILLS
+- SQL: Expert (BigQuery, PostgreSQL, MySQL, dbt, query optimization, data modeling)
+- Python: Advanced (PySpark, Pandas, Airflow, boto3, data pipeline development)
+- Cloud: GCP (BigQuery, Cloud Functions, Pub/Sub), AWS (S3, Redshift, Glue)
+- Data Engineering: Apache Spark, Kafka, Airflow, dbt, data modeling
+- Visualization: Metabase, Grafana (basic), Tableau (learning)
+- Tools: Git, Docker, Kubernetes basics, Terraform
+
+EDUCATION
+B.Tech in Computer Science | NIT Trichy | 2016-2020 | GPA: 8.5/10
+
+CERTIFICATIONS
+- Google Cloud Professional Data Engineer
+- Apache Spark Developer Certificate

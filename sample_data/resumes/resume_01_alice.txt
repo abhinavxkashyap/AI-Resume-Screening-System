@@ -1,0 +1,35 @@
+ALICE SHARMA
+Email: alice.sharma@email.com | Phone: +91 98765 43210
+LinkedIn: linkedin.com/in/alicesharma | Location: Bangalore, India
+
+SUMMARY
+Results-driven Data Analyst with 3+ years of experience in product analytics, with expertise in SQL, Python, and Tableau. Proven track record of delivering actionable insights that improved key business metrics by 15-20%. Passionate about turning complex data into clear stories.
+
+EXPERIENCE
+
+Senior Data Analyst | DataWorks Analytics | Jan 2022 - Present
+- Analyzed user behavior data across 10M+ daily active users using SQL and Python
+- Built 25+ Tableau dashboards for executive leadership, reducing manual reporting by 60%
+- Led A/B testing framework that improved conversion rates by 18%
+- Collaborated with product managers to define KPIs for 3 major product launches
+- Automated weekly reports using Python (Pandas, NumPy) saving 10 hours/week
+
+Data Analyst Intern | Flipkart | Jun 2021 - Dec 2021
+- Performed cohort analysis and customer segmentation using SQL and Python
+- Created Power BI dashboards tracking customer retention metrics
+- Assisted in statistical analysis for pricing optimization experiments
+
+SKILLS
+- SQL: Advanced (window functions, CTEs, query optimization, PostgreSQL, BigQuery)
+- Python: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn basics
+- Visualization: Tableau (certified), Power BI
+- Statistics: Hypothesis testing, A/B testing, regression analysis
+- Tools: Excel, Google Sheets, Git, Jupyter Notebooks, Airflow basics
+- Cloud: Google BigQuery, AWS basics
+
+EDUCATION
+B.Tech in Computer Science | IIT Madras | 2018-2022 | GPA: 8.7/10
+
+CERTIFICATIONS
+- Tableau Desktop Specialist
+- Google Data Analytics Professional Certificate

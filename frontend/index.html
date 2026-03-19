@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered resume screening system that analyzes and ranks candidates against job descriptions using advanced AI.">
+    <title>AI Resume Screener — Intelligent Candidate Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h1>AI Resume Screener</h1>
+            </div>
+            <div class="header-badge">
+                <span class="pulse-dot"></span>
+                AI-Powered Analysis
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-section">
+            <div class="hero-content">
+                <div class="hero-tag">Powered by AI</div>
+                <h2>Screen Resumes <span class="gradient-text">Intelligently</span></h2>
+                <p>Upload a job description and candidate resumes. Our AI analyzes, scores, and ranks candidates in seconds — with actionable insights on strengths and gaps.</p>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload-section">
+            <div class="upload-grid">
+                <!-- JD Upload -->
+                <div class="upload-card glass-card" id="jd-upload-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon jd-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3>Job Description</h3>
+                        <p>Upload JD file (PDF or TXT)</p>
+                    </div>
+                    <div class="drop-zone" id="jd-drop-zone">
+                        <input type="file" id="jd-file-input" accept=".pdf,.txt,.text,.md" hidden>
+                        <div class="drop-zone-content">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <span>Drag & drop or <strong>click to browse</strong></span>
+                            <small>PDF, TXT supported</small>
+                        </div>
+                        <div class="file-preview" id="jd-file-preview" style="display:none;">
+                            <div class="file-info">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span id="jd-file-name"></span>
+                            </div>
+                            <button class="remove-btn" id="jd-remove-btn" title="Remove file">✕</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Upload -->
+                <div class="upload-card glass-card" id="resume-upload-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon resume-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <line x1="19" y1="8" x2="19" y2="14"/>
+                                <line x1="22" y1="11" x2="16" y2="11"/>
+                            </svg>
+                        </div>
+                        <h3>Candidate Resumes</h3>
+                        <p>Upload multiple resumes (PDF or TXT)</p>
+                    </div>
+                    <div class="drop-zone" id="resume-drop-zone">
+                        <input type="file" id="resume-file-input" accept=".pdf,.txt,.text,.md" multiple hidden>
+                        <div class="drop-zone-content">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <span>Drag & drop or <strong>click to browse</strong></span>
+                            <small>Multiple files • PDF, TXT supported</small>
+                        </div>
+                        <div class="file-list" id="resume-file-list" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analyze Button -->
+            <div class="analyze-btn-wrapper">
+                <button id="analyze-btn" class="analyze-btn" disabled>
+                    <span class="btn-content">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        Analyze Candidates
+                    </span>
+                    <span class="btn-loading" style="display:none;">
+                        <div class="spinner"></div>
+                        Analyzing with AI...
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <section id="loading-section" style="display:none;">
+            <div class="glass-card loading-card">
+                <div class="loading-animation">
+                    <div class="loading-ring"></div>
+                    <div class="loading-ring"></div>
+                    <div class="loading-ring"></div>
+                </div>
+                <h3>AI is screening candidates...</h3>
+                <p id="loading-status">Analyzing resumes against job requirements</p>
+                <div class="loading-progress">
+                    <div class="loading-progress-bar" id="loading-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" style="display:none;">
+            <!-- Results Header -->
+            <div class="results-header glass-card">
+                <div class="results-header-info">
+                    <div class="results-tag">Analysis Complete</div>
+                    <h2 id="results-job-title"></h2>
+                    <p id="results-job-summary"></p>
+                </div>
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-total">0</span>
+                        <span class="stat-label">Candidates</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-strong">0</span>
+                        <span class="stat-label">Strong Fit</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-moderate">0</span>
+                        <span class="stat-label">Moderate Fit</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-notfit">0</span>
+                        <span class="stat-label">Not Fit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screening Criteria -->
+            <div class="criteria-section glass-card" id="criteria-section">
+                <h3>📋 Screening Criteria</h3>
+                <div class="criteria-tags" id="criteria-tags"></div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-grid">
+                <div class="glass-card chart-card">
+                    <h3>Score Distribution</h3>
+                    <canvas id="score-chart"></canvas>
+                </div>
+                <div class="glass-card chart-card">
+                    <h3>Fit Breakdown</h3>
+                    <canvas id="fit-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Ranking Table -->
+            <div class="ranking-section glass-card">
+                <h3>📊 Candidate Rankings</h3>
+                <div class="table-wrapper">
+                    <table id="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Candidate</th>
+                                <th>Score</th>
+                                <th>Strengths</th>
+                                <th>Gaps</th>
+                                <th>Recommendation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ranking-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Detailed Cards -->
+            <div class="detail-cards-header">
+                <h3>🔍 Detailed Analysis</h3>
+            </div>
+            <div class="detail-cards-grid" id="detail-cards-grid"></div>
+
+            <!-- New Analysis Button -->
+            <div class="analyze-btn-wrapper">
+                <button id="new-analysis-btn" class="analyze-btn secondary-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="1 4 1 10 7 10"/>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+                    </svg>
+                    Start New Analysis
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Built with ❤️ by <strong>Abhinav Kumar</strong> — AI Resume Screening System</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

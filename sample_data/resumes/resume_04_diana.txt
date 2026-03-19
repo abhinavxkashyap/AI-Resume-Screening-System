@@ -1,0 +1,37 @@
+DIANA REDDY
+Email: diana.reddy@email.com | Phone: +91 76543 21098
+LinkedIn: linkedin.com/in/dianareddy | Location: Bangalore, India
+
+SUMMARY
+Data Scientist with 4 years of experience in machine learning, statistical modeling, and data analysis. Expert in Python and SQL with hands-on experience building ML models in production. Strong background in statistics and experimentation.
+
+EXPERIENCE
+
+Data Scientist | Amazon India | Jun 2021 - Present
+- Built recommendation models using Python (Scikit-learn, XGBoost) improving CTR by 12%
+- Designed and analyzed 30+ A/B experiments using statistical hypothesis testing
+- Queried petabyte-scale data using SQL on Amazon Redshift and Presto
+- Created automated dashboards in QuickSight for business stakeholders
+- Mentored 2 junior analysts on SQL and Python best practices
+
+Data Analyst | Swiggy | Jan 2020 - May 2021
+- Performed deep-dive analyses on delivery logistics data using SQL and Python
+- Built Tableau dashboards for operations team tracking 15+ metrics
+- Conducted customer segmentation using clustering algorithms
+- Created weekly automated reports using Python and Airflow
+
+SKILLS
+- Python: Expert (Pandas, NumPy, Scikit-learn, TensorFlow, Matplotlib, Seaborn)
+- SQL: Expert (Redshift, BigQuery, PostgreSQL, Presto, window functions, optimization)
+- ML: Regression, Classification, Clustering, NLP, Recommendation Systems
+- Visualization: Tableau, QuickSight, Matplotlib, Plotly
+- Statistics: Bayesian inference, regression, hypothesis testing, causal inference
+- Tools: Git, Airflow, Docker, Jupyter, AWS (S3, Redshift, SageMaker)
+
+EDUCATION
+M.Sc in Statistics | Indian Statistical Institute | 2018-2020 | GPA: 9.1/10
+B.Sc in Mathematics | St. Xavier's College | 2015-2018 | GPA: 8.9/10
+
+CERTIFICATIONS
+- AWS Machine Learning Specialty
+- Tableau Desktop Certified Professional

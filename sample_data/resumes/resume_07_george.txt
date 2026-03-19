@@ -1,0 +1,38 @@
+GEORGE THOMAS
+Email: george.thomas@email.com | Phone: +91 43210 98765
+Location: Chennai, India
+
+SUMMARY
+Marketing professional with 5 years of experience in digital marketing and campaign management. Experience with Google Analytics and basic data analysis for marketing optimization.
+
+EXPERIENCE
+
+Digital Marketing Manager | WebReach Solutions | Mar 2020 - Present
+- Managed digital marketing campaigns across Google Ads, Facebook, and Instagram
+- Used Google Analytics to track website traffic and campaign performance
+- Created monthly marketing performance reports in Google Sheets
+- Managed a team of 3 junior marketers
+- Increased organic traffic by 40% through SEO optimization
+- Budget management of Rs. 50 lakh per quarter
+
+Marketing Executive | AdWorld Media | Jun 2018 - Feb 2020
+- Executed email marketing campaigns using Mailchimp
+- Tracked campaign metrics and created basic reports
+- Assisted in social media content creation and scheduling
+- Managed vendor relationships for creative production
+
+SKILLS
+- Marketing: Google Ads, Facebook Ads, SEO, SEM, Email Marketing
+- Analytics: Google Analytics, Google Sheets, basic Excel
+- Tools: Mailchimp, HubSpot, Canva, WordPress
+- SQL: None
+- Python: None
+- Communication: Excellent written and verbal communication
+
+EDUCATION
+MBA in Marketing | Symbiosis Pune | 2016-2018
+B.A. in English | Loyola College Chennai | 2013-2016
+
+CERTIFICATIONS
+- Google Ads Search Certification
+- HubSpot Inbound Marketing Certification
