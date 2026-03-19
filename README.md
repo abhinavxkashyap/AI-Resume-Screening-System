@@ -1,6 +1,6 @@
 # 🤖 AI Resume Screening System
 
-An AI-powered resume screening and candidate ranking system that analyzes resumes against job descriptions using advanced LLM technology. Built for the **Nutrabay AI Automation Intern Assessment**.
+An AI-powered resume screening and candidate ranking system that analyzes resumes against job descriptions using advanced LLM technology.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi)
@@ -168,8 +168,7 @@ Using the included sample data (1 JD + 8 resumes), the system produces:
 
 ## 👤 Author
 
-**Abhinav Kumar**  
-Built as part of the Nutrabay AI Automation Intern Assessment
+**Abhinav Kumar**
 
 ---
 
